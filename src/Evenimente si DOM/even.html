@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Event Example</title>
+    <script>
+        window.onload = () => {
+            const input = document.getElementById("myInput");
+
+            const myCustomEvent = new Event("inputCustomEvent");
+
+            const inputHandler = (event) => {
+                console.log("Valoarea s-a modificat:", event.target.value);
+
+                document.dispatchEvent(myCustomEvent);
+            };
+
+            const myCustomHandler = () => {
+                console.log("Eveniment custom declansat! (inputCustomEvent)");
+            };
+
+            input.addEventListener("input", inputHandler); 
+            document.addEventListener("inputCustomEvent", myCustomHandler); 
+        };
+    </script>
+</head>
+
+<body>
+    <h2>Exemplu: Eveniment DOM + Eveniment custom</h2>
+    <input id="myInput" type="text" placeholder="Scrie ceva aici..." />
+</body>
+
+</html>

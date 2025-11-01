@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>API Table Example</title>
+</head>
+
+<body>
+    <h1>Lista persoane</h1>
+    <div>
+        <form>
+            <input id="inputName" type="text" placeholder="Nume">
+            <br /><br />
+            <input id="inputAge" type="number" placeholder="Varsta"> <br /><br />
+            <input value="Adauga persoana" onclick="sendData()" type="button"> <br /><br />
+        </form>
+    </div>
+
+    <div id="tableData"></div>
+
+    <hr />
+
+    <h2>Caută persoană după ID</h2>
+    <div>
+        <input id="inputId" type="number" placeholder="Introduceti ID-ul">
+        <button onclick="getById()">Caută</button>
+    </div>
+    <br />
+    <div id="resultData"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

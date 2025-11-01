@@ -17,7 +17,7 @@ function compressFile(inputFile, outputFile) {
         const data = fs.readFileSync(inputFile, 'utf-8')
         const compressed = rleCompress(data)
         fs.writeFileSync(outputFile, compressed)
-        console.log(`Fisierul ${inputFile} a fost comprimat cu succes → ${outputFile}`)
+        console.log(`Fisierul ${inputFile} a fost comprimat cu succes in ${outputFile}`)
     } catch (err) {
         console.error('Eroare:', err.message)
     }
