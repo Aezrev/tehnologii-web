@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: sans-serif;
+    padding: 32px;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 220px;
+    gap: 4px;
+}
+
+.submit-button {
+    padding: 10px 16px;
+}
